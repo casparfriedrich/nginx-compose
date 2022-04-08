@@ -6,6 +6,7 @@ services:
     container_name: nginx
     network_mode: "host"
     restart: unless-stopped
+    stop_signal: SIGQUIT
     volumes:
       - /etc/letsencrypt/live/home.friedrich.ventures/fullchain.pem:/etc/nginx/fullchain.pem:ro
       - /etc/letsencrypt/live/home.friedrich.ventures/privkey.pem:/etc/nginx/privkey.pem:ro
