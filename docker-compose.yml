@@ -2,8 +2,7 @@ version: "3.9"
 
 services:
   nginx:
-    image: nginx:1.23-alpine
-    container_name: nginx
+    image: nginx:mainline-alpine
     network_mode: "host"
     restart: unless-stopped
     stop_grace_period: 60s
